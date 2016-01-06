@@ -2,6 +2,7 @@
 Data structures and algorithm projects at UTD completed by Himanshu Parashar(UTD_ID:-2021278364)
 
 --------PROJECT-1------------
+
 -EvaluateTemperature.java
 It has a class named "EvaluateTemperature" which has a main method in which scanner is taking input as an integer representing a temperature and a string of either C or F for Celsius or Fahrenheit. If Celsius(C) then it is converting it to Fahrenheit(F). Using following table to evaluate temperature and print its description.
     Fahrenheit ranges
@@ -28,6 +29,7 @@ It has a generic class named "MyFour" using type parameter of "T". It has four f
 
 
 --------PROJECT2------------
+
 -LinkLists.java
 It has a class named "LinkLists" which will create three linked lists. In main method BufferedReader is reading the input(txt file) file which defines the action to be performed on linked lists "A" - ADD, "P" - Print the linked lists, "C" - CANCEL, "R" - Remove. These actions are the following methods:-
 ADD- It will add the node to the shortest list, or to the first list if they are all equal in size. Lists are kept in sorted order, smallest at the front, so an add operation is inserting to the correct position.
