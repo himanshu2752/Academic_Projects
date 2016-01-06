@@ -32,6 +32,7 @@ It has a generic class named "MyFour" using type parameter of "T". It has four f
 
 -LinkLists.java
 It has a class named "LinkLists" which will create three linked lists. In main method BufferedReader is reading the input(txt file) file which defines the action to be performed on linked lists "A" - ADD, "P" - Print the linked lists, "C" - CANCEL, "R" - Remove. These actions are the following methods:-
+
 ADD- It will add the node to the shortest list, or to the first list if they are all equal in size. Lists are kept in sorted order, smallest at the front, so an add operation is inserting to the correct position.
 
 CANCEL- cancel operation is removing an item from the lists if found, or report an error if not. A cancel operation only removes one matching item in the case of duplicates.
