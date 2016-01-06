@@ -1,0 +1,51 @@
+for (int i=0; i<list.size(); i++)
+	    for (int j=0; j<list.size(); j++)
+               if (i != j)
+	       {
+	          String one = list.get(i);
+	          String two = list.get(j);
+	          if (one.equals(two))
+		     System.out.println(list.get(i) + " is a duplicate");
+               }
+      }
+Question1
+In the above algorithm there are nested for loops to find the duplicate in the list .So to find a duplicate ,we compare all elements with the elements of whole list therefore traversing the whole list (n times if we take list size to be n)) and then doing this for n times (all elements of the array) .It is reporting duplicate more than once since it is checking each element with all elements hence the the element which was reported duplicate for the previous element will report its duplicate element as previous one or we can say it is not skipping the element which has been duplicated already .
+
+Question2
+Big O running time of the original program can be observed as below
+
+while (sc.hasNext())
+	 {
+	    String ph = sc.nextLine();
+	    list.add(ph);					//n
+         }							
+
+	 for (int i=0; i<list.size(); i++)			//n
+	    for (int j=0; j<list.size(); j++)			//n
+               if (i != j)
+	       {
+	          String one = list.get(i);			//n
+	          String two = list.get(j);			//n
+	          if (one.equals(two))
+		     System.out.println(list.get(i) + " is a duplicate");	//c
+               }
+      }
+
+n + n*n(n+n+c)
+n + 2n^3 +cn^2
+O(n^3)
+we can also oberve Big O by looking at the code : one while loop for which running time is n, there is nested for loop for which running time is n^2 and n time for traversing the link list to get the value .by adding the time of while loop i.e n and n*n*n(nested for loop and traversing the link list)
+This will give O(n^3) running time .
+
+Question3
+Algorithm for new program uses quadratic probing . txt file containing the phone numbers is read line by line and added to the hash table by first converting the string into number then getting hashvalue for it.
+The hashfunction uses that hashvalue . I have taken default table size of 5003 and then increasing it as my hashtable grows (if it gets half full i am doubling the hash table).Hashfunction takes mod of the phone number with 5003 when size of array is <= 5003 ,1007 when size of array is <= 10007 and mod with array size when size of array becomes greater than 10007.
+I am increasing the array size by finding the prime using a function of my own (it may not be efficient for larger values) . I am finding duplicate by storing the number of times the duplicate of a particular phone number in a element of new array table where index is the hash of that duplicate phone number therefore we can know each duplicate number as its hash will be the index in new array and number of times its duplicating is the element of that index.
+Hence the phonenumber whose hash (as index) in new table ,if its element is not null is duplicate .
+
+Question4
+Big O running time of my program is linear with contant time for adding (since when we double the number of records/phoneNumber in txt file time also increases linearly).
+While loop in find will take linear time in worst case but logN average time as array is doubled each time it is half full ,so probing for next null position can be done in logN time. It can take constant time in best case scenario where small file of phone numbers is taken .
+
+Question5
+Original program is taking 863835 millisecond or 14.39 minutes to complete . New program is taking 350 millisecond to complete.
