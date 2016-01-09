@@ -28,7 +28,7 @@ It has a generic class named "MyFour" using type parameter of "T". It has four f
 "main" method of this class has a MyFour object of type String, passing it four identical strings. It prints the object, then calls and prints the results of "allEqual". Also another object of four different Integers. It again prints this second object and prints the results of "allEqual".  Then "shiftLeft" method is called which shift the items left and then items are printed again to check the same.
 
 
---------PROJECT2------------
+--------PROJECT-2------------
 
 -LinkLists.java
 It has a class named "LinkLists" which will create three linked lists. In main method BufferedReader is reading the input(txt file) file which defines the action to be performed on linked lists "A" - ADD, "P" - Print the linked lists, "C" - CANCEL, "R" - Remove. These actions are the following methods:-
@@ -40,4 +40,36 @@ CANCEL- cancel operation is removing an item from the lists if found, or report 
 Remove- remove operation is removing the smallest item from the lists. It determines which list has the smallest item and that item is removed. If all lists are empty, it prints an error message.
 
 
---------PROJECT3------------
+--------PROJECT-3------------
+GenBinTree.java
+It has a class named "GenBinTree" which has a Node class storing a value of generic type <T>. Tree created in this project is not a search tree(no ordering of nodes by value) instead its just a generic binary tree. Following methods are created to perform a specific function :-
+
+-ADD- This operation works by receiving a string for example :-
+
+myTree.add("20");
+myTree.add("L","50");
+myTree.add("R","10");
+myTree.add("LR","40");
+
+So 20 will be the root node , 50 will be root's left child, 10 will be root's right child, 40 will be right child of root's left node.
+
+-find- This operation returns true if the value passed is in the tree.
+
+-remove- This operation removes the node having the passed value, but only if it is a leave.
+
+-swap- This operation swaps children of node having the passed value.
+
+-mirror- This operation Makes the tree a mirror image of the original tree.
+
+-RotateRight- This operation performs a single right rotation on the node having the passed value.
+
+-RotateLeft- This operation performs a single left rotation on the node having the passed value.
+
+-NumberOfNodes- Recursively traverses the tree and returns the count of nodes.
+
+-printTreeInorder- Prints node values using an inorder traversal.
+
+All above methods operate on object making the call (none are static). Also all public methods are called in main, private methods for each operation are called in their public method.
+
+
+--------PROJECT-4------------
