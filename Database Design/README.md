@@ -1,5 +1,6 @@
+#Academic_Project in Database Design.
 
--------Database Design AUTO PARTS SALE ----------
+---------AUTO PARTS SALE ----------
 
 Project to design, implement and present a Database with phases including Requirement analysis, ER diagram, relational schema, functional dependencies, normalization and SQL statements and procedures.
 
