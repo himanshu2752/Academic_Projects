@@ -1,7 +1,7 @@
-# Academic_Projects
+# Academic_Projects in Alogrithm analysis and data structures
 Data structures and algorithm projects at UTD completed by Himanshu Parashar(UTD_ID:-2021278364)
 
---------PROJECT-1------------
+--------PROJECT-1------------JAVA Generics,Constructors,2D arrays.
 
 -EvaluateTemperature.java
 It has a class named "EvaluateTemperature" which has a main method in which scanner is taking input as an integer representing a temperature and a string of either C or F for Celsius or Fahrenheit. If Celsius(C) then it is converting it to Fahrenheit(F). Using following table to evaluate temperature and print its description.
@@ -28,7 +28,7 @@ It has a generic class named "MyFour" using type parameter of "T". It has four f
 "main" method of this class has a MyFour object of type String, passing it four identical strings. It prints the object, then calls and prints the results of "allEqual". Also another object of four different Integers. It again prints this second object and prints the results of "allEqual".  Then "shiftLeft" method is called which shift the items left and then items are printed again to check the same.
 
 
---------PROJECT-2------------
+--------PROJECT-2------------LINKED LISTS
 
 -LinkLists.java
 It has a class named "LinkLists" which will create three linked lists. In main method BufferedReader is reading the input(txt file) file which defines the action to be performed on linked lists "A" - ADD, "P" - Print the linked lists, "C" - CANCEL, "R" - Remove. These actions are the following methods:-
@@ -40,7 +40,8 @@ CANCEL- cancel operation is removing an item from the lists if found, or report 
 Remove- remove operation is removing the smallest item from the lists. It determines which list has the smallest item and that item is removed. If all lists are empty, it prints an error message.
 
 
---------PROJECT-3------------
+--------PROJECT-3------------BINARY TREE
+
 GenBinTree.java
 It has a class named "GenBinTree" which has a Node class storing a value of generic type <T>. Tree created in this project is not a search tree(no ordering of nodes by value) instead its just a generic binary tree. Following methods are created to perform a specific function :-
 
@@ -72,4 +73,17 @@ So 20 will be the root node , 50 will be root's left child, 10 will be root's ri
 All above methods operate on object making the call (none are static). Also all public methods are called in main, private methods for each operation are called in their public method.
 
 
---------PROJECT-4------------
+--------PROJECT-4------------HASHING/HASH TABLE
+
+DupLL.java
+It is a original program file provided, its purpose is to read a file of phone numbers and report duplicates. Its main method opens a file of 5003 phone numbers (ph.txt) in which one number has one duplicate and another number has two duplicates. It uses Linkedlist with very poor performing algorithm to find duplicates and same duplicates are reported more than once.
+
+DupHT.java
+It has class name DupHT with a main method to read the txt file of phone numbers, putting each number(string) in a list and then adding them in a hashtable. Object of MyHashTable class is created in this class to access the methods of MyHashTable. Number of duplicates and duplicate phone numbers are printed.
+
+MyHashTable.java
+It has class named MyHashTable which is creating a hash table for the string values received. Algorithm for new program uses quadratic probing. txt file containing the phone numbers is read line by line and added to the hash table by first converting the string into number then getting hashvalue for it. The hashfunction uses that hashvalue. I have taken default table size of 5003 and then increasing it as my hashtable grows (if it gets half full i am doubling the hash table).Hashfunction takes mod of the phone number with 5003 when size of array is <= 5003 ,1007 when size of array is <= 10007 and mod with array size when size of array becomes greater than 10007.
+I am increasing the array size by finding the prime using a function of my own (it may not be efficient for larger values). I am finding duplicate by storing the number of times the duplicate of a particular phone number in a element of new array table where index is the hash of that duplicate phone number therefore we can know each duplicate number as its hash will be the index in new array and number of times its duplicating is the element of that index.
+Hence the phonenumber whose hash (as index) in new table has its element not null is duplicate phone number.
+
+Original program(DupLL) is taking 863835 millisecond or 14.39 minutes to complete . New program(DupHT) is taking 350 millisecond to complete.
