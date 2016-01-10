@@ -10,7 +10,7 @@ It has a class named "EvaluateTemperature" which has a main method in which scan
     0-32   Very cold
     33-50  Cold
     51-70  Mild
-    71-90  Warm
+    71-90  WarmS
     91-100 Hot
     > 100  Very hot
 
@@ -91,10 +91,20 @@ Original program(DupLL) is taking 863835 millisecond or 14.39 minutes to complet
 
 --------PROJECT-5------------ SORT Algorithms
 
--Sort.java- Class Sort has static methods of insertion sort named "insertionSort" and quick sort named "quicksort" referenced from the book "Data Structures and Algorithm Analysis in Java" by Mark Allen Weiss.
+-Sort.java- Class Sort has static methods of sorting algorithms- insertion sort named "insertionSort" and quick sort named "quicksort" referenced from the book "Data Structures and Algorithm Analysis in Java" by Mark Allen Weiss.
 
 -BucketSort.java- It has class named "BucketSort" which has a sort method created by me to sort the list according to bucket sort in which temporary array is created who's index is the element of the original list to be sorted and it is incremented each time it occurs traversing throught the original list. And then sorted list is obtained by taking the lower index of temporary list first.
 
 -SortMain.java- It has method "Random" which is generating the random numbers(shuffeling the integers in the list) for a list of type integers. Number of items/integers in the list can be changed by changing the value of "NUM_ITEMS". It also has main method which is sorting the list by insertion sort and quick sort by methods "insertionSort" and "quicksort" in Sort class and by bucket sort by method "BucketSort" in the class BucketSort.
 
 A graph is represented in the "Graph.xlsx" to compare running times of all the sort methods used in the program.
+
+
+--------PROJECT-6------------Graphs and Kruskals Algorithm
+
+Program is using Kruskal's algorithm to find a minimum spanning tree of a graph. Graph is provided as a file named "assn9_data.csv". Data in the file is in the form of adjacency list. The file has different cities and their distance from each city as adjancy list.
+
+-DisjSets.java - Referenced from the book "Data Structures and Algorithm Analysis in Java" by Mark Allen Weiss (autors code).
+
+-Kruskals.java -  Output of each edge of minimum spanning tree are the names of the two cities and the distance between them. It also prints the sum of all the distances in the tree
+
