@@ -87,3 +87,14 @@ I am increasing the array size by finding the prime using a function of my own (
 Hence the phonenumber whose hash (as index) in new table has its element not null is duplicate phone number.
 
 Original program(DupLL) is taking 863835 millisecond or 14.39 minutes to complete . New program(DupHT) is taking 350 millisecond to complete.
+
+
+--------PROJECT-5------------ SORT Algorithms
+
+-Sort.java- Class Sort has static methods of insertion sort named "insertionSort" and quick sort named "quicksort" referenced from the book "Data Structures and Algorithm Analysis in Java" by Mark Allen Weiss.
+
+-BucketSort.java- It has class named "BucketSort" which has a sort method created by me to sort the list according to bucket sort in which temporary array is created who's index is the element of the original list to be sorted and it is incremented each time it occurs traversing throught the original list. And then sorted list is obtained by taking the lower index of temporary list first.
+
+-SortMain.java- It has method "Random" which is generating the random numbers(shuffeling the integers in the list) for a list of type integers. Number of items/integers in the list can be changed by changing the value of "NUM_ITEMS". It also has main method which is sorting the list by insertion sort and quick sort by methods "insertionSort" and "quicksort" in Sort class and by bucket sort by method "BucketSort" in the class BucketSort.
+
+A graph is represented in the "Graph.xlsx" to compare running times of all the sort methods used in the program.
