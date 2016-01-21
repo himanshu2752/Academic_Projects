@@ -46,7 +46,7 @@ It has a class named "LinkLists" which will create three linked lists. In main m
 It has a class named "GenBinTree" which has a Node class storing a value of generic type <T>. Tree created in this project is not a search tree(no ordering of nodes by value) instead its just a generic binary tree. Following methods are created to perform a specific function :-
 
  - ADD- This operation works by receiving a string for example :-
-#######myTree.add("20");
+######myTree.add("20");
 myTree.add("L","50");
 myTree.add("R","10");
 myTree.add("LR","40");
