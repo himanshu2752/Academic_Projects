@@ -6,13 +6,13 @@
 - EvaluateTemperature.java
 It has a class named "EvaluateTemperature" which has a main method in which scanner is taking input as an integer representing a temperature and a string of either C or F for Celsius or Fahrenheit. If Celsius(C) then it is converting it to Fahrenheit(F). Using following table to evaluate temperature and print its description.
     Fahrenheit ranges
-     < 0   Extremely cold
-    0-32   Very cold
-    33-50  Cold
-    51-70  Mild
-    71-90  WarmS
-    91-100 Hot
-    > 100  Very hot
+#######     < 0   Extremely cold
+#######    0-32   Very cold
+#######    33-50  Cold
+#######    51-70  Mild
+#######    71-90  WarmS
+#######    91-100 Hot
+#######    > 100  Very hot
 
 - ScoresTest.java
 It has class named "ScoresTest" which has a main method in which scanner is taking input the name and 5 quiz scores for each of 10 different people storing the names in a 1D-array, and the scores in a 2D-array. A method named average is calculating the average score of the student. Name of each student and his/her average score is printed as output.
@@ -46,10 +46,10 @@ It has a class named "LinkLists" which will create three linked lists. In main m
 It has a class named "GenBinTree" which has a Node class storing a value of generic type <T>. Tree created in this project is not a search tree(no ordering of nodes by value) instead its just a generic binary tree. Following methods are created to perform a specific function :-
 
  - ADD- This operation works by receiving a string for example :-
-myTree.add("20");
-myTree.add("L","50");
-myTree.add("R","10");
-myTree.add("LR","40");
+#######myTree.add("20");
+#######myTree.add("L","50");
+#######myTree.add("R","10");
+#######myTree.add("LR","40");
 So 20 will be the root node , 50 will be root's left child, 10 will be root's right child, 40 will be right child of root's left node.
 
  - find- This operation returns true if the value passed is in the tree.
