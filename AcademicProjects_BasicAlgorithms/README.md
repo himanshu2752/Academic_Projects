@@ -1,4 +1,4 @@
-# (http://fontawesome.io)Academic_Projects in Alogrithm analysis and data structures
+# (http://fontawesome.io) Academic_Projects in Alogrithm analysis and data structures
 Data structures and algorithm projects at UTD completed by Himanshu Parashar(UTD_ID:-2021278364)
 
 ###--------PROJECT-1------------JAVA Generics,Constructors,2D arrays.
