@@ -1,7 +1,7 @@
 # (http://fontawesome.io) Academic_Projects in Alogrithm analysis and data structures
-Data structures and algorithm projects at UTD completed by Himanshu Parashar(UTD_ID:-2021278364)
+####Data structures and algorithm projects at UTD completed by Himanshu Parashar(UTD_ID:-2021278364)
 
-###--------PROJECT-1------------JAVA Generics,Constructors,2D arrays.
+####--------PROJECT-1------------JAVA Generics,Constructors,2D arrays.
 
 -EvaluateTemperature.java
 It has a class named "EvaluateTemperature" which has a main method in which scanner is taking input as an integer representing a temperature and a string of either C or F for Celsius or Fahrenheit. If Celsius(C) then it is converting it to Fahrenheit(F). Using following table to evaluate temperature and print its description.
@@ -28,7 +28,7 @@ It has a generic class named "MyFour" using type parameter of "T". It has four f
 "main" method of this class has a MyFour object of type String, passing it four identical strings. It prints the object, then calls and prints the results of "allEqual". Also another object of four different Integers. It again prints this second object and prints the results of "allEqual".  Then "shiftLeft" method is called which shift the items left and then items are printed again to check the same.
 
 
-###--------PROJECT-2------------LINKED LISTS
+####--------PROJECT-2------------LINKED LISTS
 
 -LinkLists.java
 It has a class named "LinkLists" which will create three linked lists. In main method BufferedReader is reading the input.txt(txt file) file which defines the action to be performed on linked lists "A" - ADD, "P" - Print the linked lists, "C" - CANCEL, "R" - Remove. These actions are the following methods:-
@@ -40,7 +40,7 @@ CANCEL- cancel operation is removing an item from the lists if found, or report 
 Remove- remove operation is removing the smallest item from the lists. It determines which list has the smallest item and that item is removed. If all lists are empty, it prints an error message.
 
 
-###--------PROJECT-3------------BINARY TREE
+####--------PROJECT-3------------BINARY TREE
 
 GenBinTree.java
 It has a class named "GenBinTree" which has a Node class storing a value of generic type <T>. Tree created in this project is not a search tree(no ordering of nodes by value) instead its just a generic binary tree. Following methods are created to perform a specific function :-
@@ -73,7 +73,7 @@ So 20 will be the root node , 50 will be root's left child, 10 will be root's ri
 All above methods operate on object making the call (none are static). Also all public methods are called in main, private methods for each operation are called in their public method.
 
 
-###--------PROJECT-4------------HASHING/HASH TABLE
+####--------PROJECT-4------------HASHING/HASH TABLE
 
 DupLL.java
 It is a original program file provided, its purpose is to read a file of phone numbers and report duplicates. Its main method opens a file of 5003 phone numbers (ph.txt) in which one number has one duplicate and another number has two duplicates. It uses Linkedlist with very poor performing algorithm to find duplicates and same duplicates are reported more than once.
@@ -89,7 +89,7 @@ Hence the phonenumber whose hash (as index) in new table has its element not nul
 Original program(DupLL) is taking 863835 millisecond or 14.39 minutes to complete . New program(DupHT) is taking 350 millisecond to complete.
 
 
-###--------PROJECT-5------------ SORT Algorithms
+####--------PROJECT-5------------ SORT Algorithms
 
 -Sort.java- Class Sort has static methods of sorting algorithms- insertion sort named "insertionSort" and quick sort named "quicksort" referenced from the book "Data Structures and Algorithm Analysis in Java" by Mark Allen Weiss.
 
@@ -100,7 +100,7 @@ Original program(DupLL) is taking 863835 millisecond or 14.39 minutes to complet
 A graph is represented in the "Graph.xlsx" to compare running times of all the sort methods used in the program.
 
 
-###--------PROJECT-6------------Graphs and Kruskals Algorithm
+####--------PROJECT-6------------Graphs and Kruskals Algorithm
 
 Program is using Kruskal's algorithm to find a minimum spanning tree of a graph. Graph is provided as a file named "assn9_data.csv". Data in the file is in the form of adjacency list. The file has different cities and their distance from each city as adjancy list.
 
