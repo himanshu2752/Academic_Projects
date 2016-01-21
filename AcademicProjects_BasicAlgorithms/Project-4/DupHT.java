@@ -1,9 +1,9 @@
-package project4;
+//package project4;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
-import project4.MyHashTable;
+//import project4.MyHashTable;
 
 public class DupHT 
 {

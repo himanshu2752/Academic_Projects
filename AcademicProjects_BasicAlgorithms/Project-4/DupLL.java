@@ -14,26 +14,26 @@ public class DupLL
          Scanner sc = new Scanner(new File("ph.txt"));
          LinkedList<String> list = new LinkedList<>();
 
-	 while (sc.hasNext())
-	 {
-	    String ph = sc.nextLine();
-	    list.add(ph);
+    while (sc.hasNext())
+    {
+       String ph = sc.nextLine();
+       list.add(ph);
          }
 
-	 for (int i=0; i<list.size(); i++)
-	    for (int j=0; j<list.size(); j++)
+    for (int i=0; i<list.size(); i++)
+       for (int j=0; j<list.size(); j++)
                if (i != j)
-	       {
-	          String one = list.get(i);
-	          String two = list.get(j);
-	          if (one.equals(two))
-		     System.out.println(list.get(i) + " is a duplicate");
+          {
+             String one = list.get(i);
+             String two = list.get(j);
+             if (one.equals(two))
+           System.out.println(list.get(i) + " is a duplicate");
                }
       }
       catch (Exception e)
       {
           System.out.println("Exception " + e);
-	  System.exit(1);
+     System.exit(1);
       }
    }
 }

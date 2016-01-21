@@ -1,6 +1,4 @@
 
-package project3;
-import java.util.*;
 public class GenBinTree<T extends Comparable<? super T>>
 {
 	 private Node<T> root ;
@@ -171,8 +169,7 @@ public class GenBinTree<T extends Comparable<? super T>>
 	public void printTreeInorder()
 	{
 		printTree(root);
-	}
-	
+	}	
 	
 	private Node<T> InsertL(T x , Node<T> n )
 	{
@@ -194,8 +191,7 @@ public class GenBinTree<T extends Comparable<? super T>>
 		else
 			n.right = InsertR(x,n.right);
 		return n ;
-	}
-	
+	}	
 	
 	private void find(Node<T> n , T t)
 	{
@@ -209,7 +205,6 @@ public class GenBinTree<T extends Comparable<? super T>>
 			find(n.right , t);			
 		}					
 	}
-	
 	
 	
 	private void findNd(Node<T> n , T t)
@@ -328,9 +323,7 @@ public class GenBinTree<T extends Comparable<? super T>>
 	rr.right	=	RotateR(rr.right ,t);
 		
 			return rr;		
-	}
-	
-	
+	}	
 	
 	private Node<T> RotateL(Node<T> rl ,T t)
 	{
@@ -350,10 +343,6 @@ public class GenBinTree<T extends Comparable<? super T>>
 		rl.left = RotateL(rl.left , t);
 		return rl ;
 	}
-
-
-	
-
 	
 	private void countTree(Node<T> n)
 	{		
@@ -366,8 +355,7 @@ public class GenBinTree<T extends Comparable<? super T>>
 			
 		}
 		
-	}
-	
+	}	
 	
 	private void printTree(Node<T> n)
 	{		
@@ -384,6 +372,8 @@ public class GenBinTree<T extends Comparable<? super T>>
 	public static void main (String args[])
 	{
 		GenBinTree<String> myTree = new GenBinTree<>();
+		
+		// Change the following inputs to test ///
 		myTree.ADD("100");
 		myTree.ADD("L","50");
 		myTree.ADD("R","150");
@@ -414,11 +404,7 @@ public class GenBinTree<T extends Comparable<? super T>>
 		
 		myTree.find("10");
 		myTree.printTree();
-		myTree.swap("55");*/
-		
+		myTree.swap("55");*/	
 		
 	}
 }
-
-
-

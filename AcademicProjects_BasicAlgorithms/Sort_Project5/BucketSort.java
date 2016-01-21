@@ -1,19 +1,16 @@
-package project5 ;
-
-import java.util.*;
 
 
 public class BucketSort 
 {
     private static void Bucket(Integer[] a,Integer tmpArray[] )
     {
-    	int l =0 ;
-    	
+        int l =0 ;
+        
         for (int i=0 ; i<a.length ; i++)
         {
-        	if (tmpArray[a[i]] == null)
-        		tmpArray[a[i]] = 1 ;
-        	else
+            if (tmpArray[a[i]] == null)
+                tmpArray[a[i]] = 1 ;
+            else
             tmpArray[a[i]] ++ ;
         }
         for(int j=0 ; j<tmpArray.length ; j++)
@@ -31,11 +28,11 @@ public class BucketSort
     
     public static void BucketSort(Integer[] a)
     {
-    	int max = a[0];
-    	for (int i= 0 ; i <a.length ; i++)
+        int max = a[0];
+        for (int i= 0 ; i <a.length ; i++)
         {
-        	if (a[i] > max)
-        		max = a[i];
+            if (a[i] > max)
+                max = a[i];
         }
         Integer [] tmpArray = new Integer[max+1] ;
         Bucket(a , tmpArray);

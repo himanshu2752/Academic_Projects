@@ -1,6 +1,6 @@
-package project4;
+//package project4;
 
-import project4.DupHT;
+//import project4.DupHT;
 
 public class MyHashTable
 {
@@ -143,6 +143,4 @@ public class MyHashTable
 	
 	 }
 	}
-	
-
 }

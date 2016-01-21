@@ -1,4 +1,4 @@
-package Project2;
+//package Project2;
 
 import java.util.Scanner;
 import java.io.* ;
@@ -420,11 +420,7 @@ public void Remove()
 			head3 = head3.next;			
 			size3 -- ;
 			return ;
-		}
-		
-		
-
-		
+		}		
 	
 } 
 

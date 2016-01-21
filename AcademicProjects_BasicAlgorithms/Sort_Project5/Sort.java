@@ -1,7 +1,7 @@
-package project5 ;
+
 public class Sort 
 {
-	public static <AnyType extends Comparable<? super AnyType>>
+    public static <AnyType extends Comparable<? super AnyType>>
     void insertionSort( AnyType [ ] a )
     {
         int j;
@@ -14,8 +14,8 @@ public class Sort
             a[ j ] = tmp;
         }
     }
-	
-	private static <AnyType extends Comparable<? super AnyType>>
+    
+    private static <AnyType extends Comparable<? super AnyType>>
     void quicksort( AnyType [ ] a, int left, int right )
     {
         if( left + CUTOFF <= right )
@@ -41,12 +41,12 @@ public class Sort
         else  
             insertionSort(a, left, right );
     }
-	public static <AnyType extends Comparable<? super AnyType>>
+    public static <AnyType extends Comparable<? super AnyType>>
     void quicksort( AnyType [ ] a )
     {
         quicksort( a, 0, a.length - 1 );
     }
-	private static <AnyType extends Comparable<? super AnyType>>
+    private static <AnyType extends Comparable<? super AnyType>>
     AnyType median3( AnyType [ ] a, int left, int right )
     {
         int center = ( left + right ) / 2;
@@ -59,7 +59,7 @@ public class Sort
         swapReferences( a, center, right - 1 );
         return a[ right - 1 ];
     }
-	private static <AnyType extends Comparable<? super AnyType>>
+    private static <AnyType extends Comparable<? super AnyType>>
     void insertionSort( AnyType [ ] a, int left, int right )
     {
         for( int p = left + 1; p <= right; p++ )
@@ -125,7 +125,5 @@ public class Sort
         else 
             insertionSort( a, left, right );
     }
-
-
 
 }
