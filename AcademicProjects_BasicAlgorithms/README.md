@@ -20,7 +20,7 @@ Program is using Kruskal's algorithm to find a minimum spanning tree of a graph.
 
 - SortMain.java- It has method "Random" which is generating the random numbers(shuffeling the integers in the list) for a list of type integers. Number of items/integers in the list can be changed by changing the value of "NUM_ITEMS". It also has main method which is sorting the list by insertion sort and quick sort by methods "insertionSort" and "quicksort" in Sort class and by bucket sort by method "BucketSort" in the class BucketSort.
 
-######A graph is represented in the "Graph.xlsx" to compare running times of all the sort methods used in the program.
+###### A graph is represented in the "Graph.xlsx" to compare running times of all the sort methods used in the program.
 
 
 
@@ -37,7 +37,7 @@ It has class named MyHashTable which is creating a hash table for the string val
 I am increasing the array size by finding the prime using a function of my own (it may not be efficient for larger values). I am finding duplicate by storing the number of times the duplicate of a particular phone number in a element of new array table where index is the hash of that duplicate phone number therefore we can know each duplicate number as its hash will be the index in new array and number of times its duplicating is the element of that index.
 Hence the phonenumber whose hash (as index) in new table has its element not null is duplicate phone number.
 
-######Original program(DupLL) is taking 863835 millisecond or 14.39 minutes to complete . New program(DupHT) is taking 350 millisecond to complete.
+###### Original program(DupLL) is taking 863835 millisecond or 14.39 minutes to complete . New program(DupHT) is taking 350 millisecond to complete.
 
 
 
