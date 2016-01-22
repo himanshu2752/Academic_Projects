@@ -20,7 +20,7 @@ Program is using Kruskal's algorithm to find a minimum spanning tree of a graph.
 
 - SortMain.java- It has method "Random" which is generating the random numbers(shuffeling the integers in the list) for a list of type integers. Number of items/integers in the list can be changed by changing the value of "NUM_ITEMS". It also has main method which is sorting the list by insertion sort and quick sort by methods "insertionSort" and "quicksort" in Sort class and by bucket sort by method "BucketSort" in the class BucketSort.
 
-###### A graph is represented in the "Graph.xlsx" to compare running times of all the sort methods used in the program.
+##### A graph is represented in the "Graph.xlsx" to compare running times of all the sort methods used in the program.
 
 
 
