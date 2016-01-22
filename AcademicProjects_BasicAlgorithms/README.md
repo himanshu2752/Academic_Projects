@@ -37,7 +37,7 @@ It has class named MyHashTable which is creating a hash table for the string val
 I am increasing the array size by finding the prime using a function of my own (it may not be efficient for larger values). I am finding duplicate by storing the number of times the duplicate of a particular phone number in a element of new array table where index is the hash of that duplicate phone number therefore we can know each duplicate number as its hash will be the index in new array and number of times its duplicating is the element of that index.
 Hence the phonenumber whose hash (as index) in new table has its element not null is duplicate phone number.
 
-#######Original program(DupLL) is taking 863835 millisecond or 14.39 minutes to complete . New program(DupHT) is taking 350 millisecond to complete.
+######Original program(DupLL) is taking 863835 millisecond or 14.39 minutes to complete . New program(DupHT) is taking 350 millisecond to complete.
 
 
 
