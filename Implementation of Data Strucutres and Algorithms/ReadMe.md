@@ -12,19 +12,19 @@
 ### Short Project 1
 ##### Part d
 - SP1_d.java 
-To implement a recursive algorithm  without recursion, by using a stack to simulate recursion. This class has a method to implement merge sort without using recursion. This is implemented by using two stacks (of array types) where MergeSort is a public method in which array to be sorted is passed. mergeSort is a private method which is dividing the array (non recursively using two stacks) and returning sorted array, this method is calling another private method "merge" taking two divided lists (arrays)  as arguments each time the lists are divided using stacks and merging them in sorted order.
+	To implement a recursive algorithm  without recursion, by using a stack to simulate recursion. This class has a method to implement merge sort without using recursion. This is implemented by using two stacks (of array types) where MergeSort is a public method in which array to be sorted is passed. mergeSort is a private method which is dividing the array (non recursively using two stacks) and returning sorted array, this method is calling another private method "merge" taking two divided lists (arrays)  as arguments each time the lists are divided using stacks and merging them in sorted order.
 
 This sorting algorithm was tested with test input upto 20 million and is taking almost same time as mergesort(using recursion takes).
 
 ##### Part a
 - SP1a.java
-Writing functions of generic type which takes two sorted lists as inputs (arguments) and doing set operations. Below are the methods in this class
+	Writing functions of generic type which takes two sorted lists as inputs (arguments) and doing set operations. Below are the methods in this class
 - union 
-Union of two sets
+	Union of two sets
 - intersect
-Intersection of two sets
+	Intersection of two sets
 - difference
-doing set difference (List1 - List2)
+	doing set difference (List1 - List2)
 
 Test inputs are taken as linked lists.
 
