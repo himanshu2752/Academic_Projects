@@ -28,6 +28,12 @@ This sorting algorithm was tested with test input upto 20 million and is taking 
 
 Test inputs are taken as linked lists.
 
+##### Part f
+- SinglyLinkedList.java
+Recursive and nonrecursive functions for the following tasks:
+   (i) reverse the order of elements of the SinglyLinkedList class
+   (ii) print the elements of the SinglyLinkedList class, in reverse order.
+
 ### Short Project 2
 #### Test inputs can be taken upto 20 million nodes.
 ##### SP2_a (Part a)
@@ -49,11 +55,3 @@ Test inputs are taken as linked lists.
 	- bfs2 - this method does second breadth first search and returns diameter. Takes Graph and vertex(from first bfs) as input.
 
 
-
-### Group Projects
-
-###### Project 1
-- SinglyLinkedList.java
-Recursive and nonrecursive functions for the following tasks:
-   (i) reverse the order of elements of the SinglyLinkedList class
-   (ii) print the elements of the SinglyLinkedList class, in reverse order.
