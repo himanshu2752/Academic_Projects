@@ -1,5 +1,6 @@
 
-/** @author Satwant
+/** @author Group 32
+ * @Himanshu parashar and @ Satwant Singh
  *  SP2_a: Topological ordering of a DAG
  */
 import java.util.ArrayDeque;

@@ -1,5 +1,5 @@
 
-/** @author rbk
+/** @author rbk - Professors code for singly linked list
  *  Singly linked list: for instructional purposes only
  */
 
@@ -77,7 +77,7 @@ public class SinglyLinkedList<T> {
 	tail1.next = null;
     }
 
-/** @author G32
+/** @author G32 - Himanshu and Satwant
  *  Operations added on Singly linked list:
  */
     
