@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>FEMA Mitigation Programs</title>
+    <meta charset="UTF-8"/>
+    <style type="text/css">
+      div#footer{
+      border-top: 1px solid #ccc;
+      color: #666;
+      font-size: 80%;
+      }
+      div#footer a{
+      color: #555;
+      }
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>  
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" id="sgvzlr_script" src="sgvizler.js"></script>
+    <script type="text/javascript">
+      sgvizler
+          .defaultEndpointURL("http://sws.ifi.uio.no/sparql/npd")
+          .prefix('npdv', 'http://sws.ifi.uio.no/vocab/npd#');
+     
+      //// Leave this as is. Ready, steady, go!
+      $(document).ready(sgvizler.containerDrawAll);
+    </script>
+  </head>
+  <body>
+    <h1>FEMA Mitigation Programs</h1>
+
+    <h2>State vs Funds Allocated</h2>
+
+    <div id="sgvzl_example1" 
+	data-sgvizler-endpoint="http://localhost:3030/dataset1"
+	 data-sgvizler-query="PREFIX d1491: <http://data-gov.tw.rpi.edu/vocab/p/1491/>
+PREFIX d1493: <http://data-gov.tw.rpi.edu/vocab/p/1493/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?state2 (SUM(xsd:integer(?amt))AS ?funds)
+WHERE {
+  GRAPH <http://data-gov.tw.rpi.edu/vocab/Dataset_1493>
+  {
+  	 ?s2 d1493:disaster_number ?disnum .
+     ?s2 d1493:state ?state2.
+      ?s2 d1493:project_amount ?amt.
+     ?s2 d1493:status ?status.
+    ?s2 d1493:project_counties ?d2.
+   }
+}
+group by ?state2"
+	 data-sgvizler-chart="google.visualization.PieChart"
+	 data-sgvizler-log="0"
+	 data-sgvizler-chart-options="is3D=true|title=Funds in USD(Can be seen by hovering)"
+	 style="width:800px; height:600px;"
+	 >
+    </div>
+	</body>
+</html>

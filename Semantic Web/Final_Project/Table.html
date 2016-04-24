@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>FEMA Mitigation Programs</title>
+    <meta charset="UTF-8"/>
+    <style type="text/css">
+      div#footer{
+      border-top: 1px solid #ccc;
+      color: #666;
+      font-size: 80%;
+      }
+      div#footer a{
+      color: #555;
+      }
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>  
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" id="sgvzlr_script" src="sgvizler.js"></script>
+    <script type="text/javascript">
+      sgvizler
+          .defaultEndpointURL("http://sws.ifi.uio.no/sparql/npd")
+          .prefix('npdv', 'http://sws.ifi.uio.no/vocab/npd#');
+     
+      //// Leave this as is. Ready, steady, go!
+      $(document).ready(sgvizler.containerDrawAll);
+    </script>
+  </head>
+  <body>
+    <h1>FEMA Mitigation Programs</h1>
+
+    <h2>Tabular information on FEMA programs</h2>
+
+     <div id="sgvzl_example19" 
+	 data-sgvizler-endpoint="http://localhost:3030/dataset1"
+	 data-sgvizler-query="PREFIX d1491: <http://data-gov.tw.rpi.edu/vocab/p/1491/>
+		PREFIX d1493: <http://data-gov.tw.rpi.edu/vocab/p/1493/>
+		SELECT ?Title ?Disaster_Number ?Incident_Begin_Date ?Incident_End_Date ?Region ?Funds_Allocated ?Status ?Program_Description 
+		WHERE {
+		  GRAPH <http://data-gov.tw.rpi.edu/vocab/Dataset_1491>
+		  {
+			 ?s d1491:hm_program_declared ?hmpdeclared .
+			 ?s d1491:hm_program_declared ? 'Yes'.
+			 ?s d1491:disaster_number ?Disaster_Number .
+			?s d1491:incident_begin_date ?Incident_Begin_Date.
+			?s d1491:incident_end_date ?Incident_End_Date.
+		  }
+		  GRAPH <http://data-gov.tw.rpi.edu/vocab/Dataset_1493>
+		  {
+			 ?s2 d1493:disaster_number ?Disaster_Number .
+			 ?s2 d1493:title ?Title.
+			 ?s2 d1493:state ?Region.
+			  ?s2 d1493:project_amount ?Funds_Allocated.
+			 ?s2 d1493:status ?Status.
+			?s2 d1493:project_description ?Program_Description.
+		   }
+		}
+		limit 4000
+		"
+	 data-sgvizler-chart="google.visualization.Table"
+	 style="width:1600px; height:800px;"></div>
+	</body>
+</html>
