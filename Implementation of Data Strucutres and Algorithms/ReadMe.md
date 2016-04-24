@@ -53,5 +53,42 @@ Recursive and nonrecursive functions for the following tasks:
 	- BreadthFirst - this method takes graph as input @param g = graph which is read by readGraph method in Graph class @return = diameter of the tree (graph in our case) or -1 if graph is not a tree. Calls bfs1 method to find diameter
 	- bfs1 - method do first breadth first search and after selecting the maximum distance node (let Z), it calls bfs2 (second bfs) with Graph g and vertex Z as input parameters. This method takes graph g and any vertex/node as inputs and returns diameter
 	- bfs2 - this method does second breadth first search and returns diameter. Takes Graph and vertex(from first bfs) as input.
+	
+### Short Project 3
+##### SP3_a
+Implementation of Fibonaccu numbers and analyzing the running time of different approaches/algorithms
+- SP3_a.java - Fibonacci Numbers implemented using the linear recursive algorithm and the matrix form algorithm. The difference between their running tme becomes significant for very large values of n and for small values the difference remain small.
+	For n=100		For n=10000		For n=100000000
+	linear:0 ms		linear:1 ms		linear:3154ms
+	matrix:0 ms		matrix:0 ms		matrix:0 ms
 
+##### "QuickSort" and "dual pivot quick sort" analysis and comparison
+- DualPivotQuickSort.java
+- QuickSort.java
+Implemented QuickSort using Single pivot and Dual pivot partition. The comparison shows that the running time of the quicksort depends majorily on the selection of the pivot.We have taken the pivot to be the median of the first and the last element for the single pivot quicksort and first and the last elmenet of the subarrays of the dual pivot quicksort.Based on this pivot the dual pivot has almost same running time as the single pivot quicksort but the running time and space complexity improves once we start taking input(n) greater than 80 million .The case of duplicate elements are handled in the code itself.
+	Running Time:
+	For n=67108864
+	QuicSort:
+	Time: 41690 msec.
+	Memory: 1346 MB / 1805 MB.
+	DualPivotQuickSort:
+	Time: 42120 msec.
+	Memory: 1345 MB / 1806 MB.
 
+##### "MegerSort" and "DualPivotQuickSort" analysis and comparison
+- DualPivotQuickSort.java
+- MergeSort.java
+The MergeSort and dual pivot quicksort are implemented.Our analysis shows that for small inputs running time is almost same for both sorts and for large inputs mergesort has better running time but space complexity is better in quicksort.The case of duplicate elements are handled in the code itself.
+	Runninf times for sorts:
+	For n=67108864					
+	MergeSort:					
+	Time: 11908 msec.	
+	Memory: 1613 MB / 1886 MB.
+	DualPivotQuickSort:
+	Time: 43020 msec.
+	Memory: 1345 MB / 1806 MB.
+
+References:
+===================
+Dual-Pivot Quicksort algorithm,Vladimir Yaroslavskiy
+http://algs4.cs.princeton.edu/23quicksort
