@@ -1,7 +1,9 @@
 # Implementation of Advance Data Structure and algorithms
 
 ### Long Project 1
-- developed a program that implements arithmetic with large integers of arbitrary size. arithmetic operations include addition, substraction, mulitplication, power. #####Input can be large very numbers even greater than the limit of any java library big integer or number (for example 239293243294329487438483747348738470090909 and 2398403298403298884858438743874837) and their addition, product, substraction or even power can be calculated accurately.
+- developed a program that implements arithmetic with large integers of arbitrary size. arithmetic operations include addition, substraction, mulitplication, power.
+
+#####Input can be large very numbers even greater than the limit of any java library big integer or number (for example 239293243294329487438483747348738470090909 and 2398403298403298884858438743874837) and their addition, product, substraction or even power can be calculated accurately.
 
 ### Project 0
  Implemented sorting algorithms - Merge Sort and Priority Queue using java generics. And compared running times for
