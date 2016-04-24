@@ -88,7 +88,7 @@ The MergeSort and dual pivot quicksort are implemented.Our analysis shows that f
 	Time: 43020 msec.
 	Memory: 1345 MB / 1806 MB.
 
-References:
+##### References:
 ===================
 Dual-Pivot Quicksort algorithm,Vladimir Yaroslavskiy
 http://algs4.cs.princeton.edu/23quicksort
