@@ -1,4 +1,3 @@
-Project_2.zip folder contains following files -
 
 -Summary.pdf - It contains the project report
 -Design.pdf - It contains the design 
