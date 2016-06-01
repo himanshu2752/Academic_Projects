@@ -2,9 +2,9 @@
 
 ####More detail can be found in SUMMARY and Design.
 
-####3. Can be executed by going to the folder containing java file and then running the following commands- 
-javac Client.java
-javac Server.java
-java Server portnumber 
+####Can be executed by going to the folder containing java file and then running the following commands- 
+#####javac Client.java
+#####javac Server.java
+#####java Server portnumber 
 
 #####To connect to server, the server port number should be known.
