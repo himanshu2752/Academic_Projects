@@ -1,9 +1,15 @@
 # Implementation of Advance Data Structure and algorithms
 
+### Long Project 2
+-An undirected graph is given as input, in the format expected by readGraph method. Implemented 3 algorithms for finding minimum spanning trees: Prim1 (priority queue of edges; use Java's priority queues), Prim2 (priority queue of vertices, using indexed heaps), and Kruskal's algorithm. There are 3 driver programs for the 3 algorithms. Output is the weight of the minimum spanning tree.
+#####Input can be very large graph (upto 10 million nodes). Running time is optimized for 1 million nodes it will take less than 3 seconds.
+
+
 ### Long Project 1
 - developed a program that implements arithmetic with large integers of arbitrary size in a considerably low running time. arithmetic operations include addition, subtraction, multiplication, power.
 
 #####Input can be large very numbers even greater than the limit of any java library big integer or number (for example 239293243294329487438483747348738470090909 and 2398403298403298884858438743874837) and their addition, product, substraction or even power can be calculated accurately.
+
 
 ### Project 0
  Implemented sorting algorithms - Merge Sort and Priority Queue using java generics. And compared running times for
