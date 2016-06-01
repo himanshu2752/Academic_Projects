@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -5,7 +7,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
-
+/**
+ * 
+ * @author himanshu and Satwant
+ * @group G32
+ * class to implement Long project 3 - to find shortest path by BFS, DAG, Dijkstra's and Bellman-Ford algorithm
+ */
 public class ShortestPaths {
 	public static final int Infinity=Integer.MAX_VALUE;
 	String algoType;
@@ -14,6 +21,13 @@ public class ShortestPaths {
 		algoType="";
 		negCycle=true;
 	}
+	
+	/**
+	 * Method to decide the method for shortest path implementation
+	 * @param g input graph by read
+	 * @param s source vertex
+	 * @return boolean if negative cycle present
+	 */
 	public boolean fingShrtstPaths(Graph g, Vertex s){
 		List<Vertex> topOrdrlst = new LinkedList<>();
 		Graph tmp = g;
@@ -37,6 +51,12 @@ public class ShortestPaths {
 		}
 		return negCycle;
 	}
+	
+	/**
+	 * Helper function to initialize values
+	 * @param g input graph
+	 * @param s source vertex
+	 */
 	public void Initialize(Graph g,Vertex s){
     	for(Vertex v:g){
     		v.distance=Infinity;
@@ -46,6 +66,12 @@ public class ShortestPaths {
     	}
     	s.distance=0;
     }
+	
+	/**
+	 * Breadth first search 
+	 * @param g
+	 * @param s
+	 */
 	void BFS(Graph g, Vertex s)
 	{
 		Queue<Vertex> q = new LinkedList<>();
@@ -121,6 +147,14 @@ public class ShortestPaths {
 		return lst;
        
      }
+    
+    /**
+     * Helper function to relax nodes
+     * @param u  vertex/node
+     * @param v  vertex/node
+     * @param e edge
+     * @return relaxed flag
+     */
      public boolean relax(Vertex u,Vertex v,Edge e){
 		boolean flag=false;
 		if(v.distance>(u.distance+e.Weight) && u.distance!=Infinity){
@@ -130,6 +164,13 @@ public class ShortestPaths {
 		}
 		return flag;
 	 }
+     
+     /**
+      * 
+      * @param g input graph
+      * @param s source vertex
+      * @param lst list of vertices in topological order
+      */
      public void shrtstPathDAG(Graph g, Vertex s, List<Vertex> lst){
  		List<Vertex> topSortOrder= lst;
  		Initialize(g,s);
@@ -139,21 +180,31 @@ public class ShortestPaths {
  			}
  		}
  	}
+     
+     /**
+      * comparator class
+      */
      public class Comp implements Comparator<Vertex>{
+    	 
+    	 /**
+    	  * override compare method
+    	  */
 		 public int compare(Vertex u, Vertex v)
 		 {
 			return u.distance - v.distance ; 
 		 }
 	 }
+     
+     /**
+      * Dijkstra's implementation for shortest path
+      * @param g input graph
+      * @param s source vertex
+      */
      void dijkstra(Graph g, Vertex s )
  	{
  		long dist = 0;
  		
- 		Initialize(g, s);
- 	    /*for ( Vertex v : g)
- 	    {  v.distance = Infinity; v.seen = false; }
- 	    
- 	    s.distance = 0;*/  // start source vertex at distance zero
+ 		Initialize(g, s); 	    
  	    
  	    int count = 0 ;
  	    Vertex[] vArr = new Vertex[g.verts.size()] ;
@@ -214,21 +265,29 @@ public class ShortestPaths {
  			}
  		}
  		else{
- 			System.out.println("Non-positive cycle in graph. DAC is not applicable");
- 			findCycle(g, g.verts.get(1));
+ 			System.out.println("Unable to solve problem. Graph has a negative cycle.");
+ 		//	findCycle(g, g.verts.get(1));
  		}
  	}
+ 	
+ 	/**
+ 	 * Bellman-Ford algorithm implementation for shortest path
+ 	 * @param g input graph
+ 	 * @param s source vertex
+ 	 * @return boolean if negative cycle exists
+ 	 */
  	public boolean shortestPathBellmanFord(Graph g, Vertex s){
 		Queue<Vertex> vertices = new LinkedList<>();
 		Initialize(g, s);
 		s.seen=true;
 		vertices.add(s);
+		
 		while(!vertices.isEmpty()){
 			Vertex u=vertices.remove();
-		//	System.out.println(vertices);
+		
 			u.seen=false;
 			u.count+=1;
-		//	System.out.println(u.count);
+		
 			if(u.count>g.verts.size()-1)
 				return false;
 			for(Edge e:u.Adj){
@@ -244,143 +303,24 @@ public class ShortestPaths {
 			}
 			
 		}
-		/*for(Vertex u:g){
-			for(Edge e:u.Adj){
-				Vertex v=e.otherEnd(u);
-				if(v.distance>(u.distance+e.Weight))
-					return false;
-			}
-		}*/
-		return true;
+				return true;
 	}
- 	boolean checkCycle = false ;
-	public  void findCycle (Graph g, Vertex r)
-	{
-		List<Vertex> mst = new ArrayList<>();
-		Graph g1 = g ;
-		List<Vertex> cycle = new ArrayList<>();
-		List<Vertex> c = new ArrayList<>();
-		 for (Vertex v : g1)
-		 { 
-			 if ( v == r)
-				 continue ;
-			//	 v = it.next();
-			// System.out.println(v.revAdj);
-			 if(v.revAdj.size()>=1){
-			 Edge tmp = v.revAdj.get(0) ;
-			 for ( Edge e : v.revAdj)
-			 {				 
-				 if (e.Weight <= tmp.Weight)
-				 {
-					 tmp = e ;
-					 
-				 }				 
-				 else
-					 continue ;				 
-			 }
-			 
-			 for ( Edge e : v.revAdj)
-			 {
-				 e.Weight = e.Weight - tmp.Weight ;
-				 e.Visited = true;
-								 					 
-			 }
-			 }
-			 
-		 }
-		 	
-	 
-		mst = bfs(g1, r);
-		System.out.println(mst);
-		int count = 0 ;
-		Queue<Vertex> q = new LinkedList<>();
-		q.add(mst.get(0));
-		if (checkCycle )
-		{System.out.println("Cycle exists");
-			while (!q.isEmpty())
-			{
-			Vertex start ;
-			start = q.poll();
-			if (start.index != 0)
-			{
-				c= cycle.subList(start.index, count);
-				break;
-			}
-			start.index = count++ ;
-			cycle.add(start);
-			q.add(start.parent);
-						
-			}
-		}
-		System.out.println(c);
-		 
-		 
-	}
-	private List<Vertex> bfs(Graph g,Vertex r)
-	{
-	
-		List<Vertex> lMst = new ArrayList<>();
-		List<Vertex> lCycle = new ArrayList<>();
-		lMst.add(r);
-	
-		Queue<Vertex> q = new LinkedList<>();
-		Vertex current = r ;
-		if (g.numNodes == 0)
-			System.out.println("Input is not a graph");			
-		else
-		{
-			for (Vertex i : g )
-			{	
-					i.distance = Infinity ;
-		//			i.parent = null ;
-			}
-			r.distance = 0;
-			r.parent = null;
-			q.add(r);
-		
-			while (!q.isEmpty())
-			{
-				current = q.poll();
-				for (Vertex v : current.AdjV)
-				{
-					
-					if (g.EdgeWeight(current, v) == 0)
-					{
-						
-						v.distance = current.distance+g.EdgeWeight(current, v) ;
-						lMst.add(v);
-						v.parent = current;
-						q.add(v);
-						v.seen = true;
-					}
-				
-				}
-			}			
-		}
-		for (Vertex i : g)
-		{			
-		
-			if (i.parent != null && g.EdgeWeight(i.parent, i)== 0 && !i.seen )
-			{
-				checkCycle = true ;
-				lCycle.add(i);
-			
-			//	System.out.println("Graph is not connected");
-				
-			}
-		
-		}
-		if (checkCycle)
-			return lCycle ;
-		else
-			return lMst;
-				
-	}
-	
- 	public static void main(String args[]){
+ 	
+ 	/**
+ 	 * Driver for Long project 3
+ 	 * @param args
+ 	 * @throws FileNotFoundException 
+ 	 */
+ 	public static void main(String args[]) throws FileNotFoundException{
  		ShortestPaths shPaths = new ShortestPaths();
- 		Scanner sc = new Scanner(System.in);
- 		Graph g=Graph.readGraph(sc, true);
+ 	//	Scanner sc = new Scanner(System.in);
+ 		Scanner in;
+ 		if(args.length > 0) {
+ 		    in = new Scanner(new File(args[0]));
+ 	        } else {
+ 		    in = new Scanner(System.in);
+ 		}
+ 		Graph g=Graph.readGraph(in, true);
  		boolean flag=shPaths.fingShrtstPaths(g, g.verts.get(1));
  		shPaths.printResult(g, flag);
  		

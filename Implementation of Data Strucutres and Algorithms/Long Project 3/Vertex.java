@@ -31,6 +31,7 @@ public class Vertex implements Index <Vertex>,Comparator<Vertex> {
 	revAdj = new ArrayList<Edge>();   /* only for directed graphs */
 	AdjV = new ArrayList<Vertex>();		/* implemented to help in BFS*/
 	index = 0;
+	count=0;
 	}
     public void putIndex(int index){
     	this.index=index;

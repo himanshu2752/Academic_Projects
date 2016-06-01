@@ -1,7 +1,13 @@
 // Ver 1.0:  Wec, Feb 3.  Initial description.
 
 import java.util.Comparator;
-
+/**
+ * 
+ * @editedBy himanshu & Satwant
+ * @group G32
+ * BinaryHeap class of type T implements PQ
+ * @param <T>
+ */
 public class BinaryHeap<T> implements PQ<T> {
     T[] pq;
     static int size;
@@ -15,7 +21,7 @@ public class BinaryHeap<T> implements PQ<T> {
     }
 
     /** Create an empty priority queue of given maximum size */
-    BinaryHeap(int n, Comparator<T> comp) { /* to be implemented */
+    BinaryHeap(int n, Comparator<T> comp) { 
     	pq = (T[ ]) new Object[n];
     	c=comp;
     	size=0;
@@ -58,7 +64,7 @@ public class BinaryHeap<T> implements PQ<T> {
 	      for( int i = 0; i < old.length; i++ )
 	    	  pq[ i ] = old[ i ];        
     }
-    public void add(T x) { /* to be implemented */
+    public void add(T x) { 
     	
     	if(size==pq.length-1)
     	{
@@ -69,19 +75,19 @@ public class BinaryHeap<T> implements PQ<T> {
       	percolateUp(size);
     }
 
-    public T remove() { /* to be implemented */
+    public T remove() { 
     	T min =pq[1];
     	assign(1,pq[size--]);
     	percolateDown(1);
     	return min;
     }
 
-    public T peek() { /* to be implemented */
+    public T peek() { 
 	return null;
     }
 
     /** pq[i] may violate heap order with parent */
-    void percolateUp(int i) { /* to be implemented */
+    void percolateUp(int i) { 
     	pq[0] = pq[i];
     	while(c.compare(pq[i/2],pq[0])> 0)
     	{

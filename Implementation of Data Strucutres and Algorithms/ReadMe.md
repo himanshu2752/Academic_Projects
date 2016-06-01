@@ -1,5 +1,9 @@
 # Implementation of Advance Data Structure and algorithms
 
+### Long Project 3
+-Implementation of shortest path algorithms: BFS, Dijkstra's algorithm, DAG shortest paths, and Bellman-Ford algorithm. Program behaves as follows: given a directed graph as input, if the graph has uniform weights (i.e., same positive weights for all edges), then it runs BFS to find shorest paths. Otherwise, if the graph is a directed, acyclic graph (DAG), then it runs DAG shortest paths. Otherwise, if the graph has only nonnegative weights, then it runs Dijkstra's algorithm. If all these test fail, then it runs the Bellman-Ford algorithm. If the graph has negative cycles, then it prints the message "Unable to solve problem. Graph has a negative cycle".
+-Input will be a graph in the format expected by readGraph method. Driver program is in ShortestPaths.java. Timer.java is to calculate running time and memory.
+
 ### Long Project 2
 -An undirected graph is given as input, in the format expected by readGraph method. Implemented 3 algorithms for finding minimum spanning trees: Prim1 (priority queue of edges; use Java's priority queues), Prim2 (priority queue of vertices, using indexed heaps), and Kruskal's algorithm. There are 3 driver programs for the 3 algorithms. Output is the weight of the minimum spanning tree.
 #####Input can be very large graph (upto 10 million nodes). Running time is optimized for 1 million nodes it will take less than 3 seconds.
