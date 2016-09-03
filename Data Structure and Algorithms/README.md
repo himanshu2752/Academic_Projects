@@ -1,5 +1,5 @@
 # Academic_Projects in Alogrithm analysis and data structures
-####Data structures and algorithm projects at UTD completed by Himanshu Parashar(UTD_ID:-2021278364)
+####Data structures and algorithm projects at UTD completed by Himanshu Parashar
 
 
 ####--------PROJECT-6------------Graphs and Kruskals Algorithm
