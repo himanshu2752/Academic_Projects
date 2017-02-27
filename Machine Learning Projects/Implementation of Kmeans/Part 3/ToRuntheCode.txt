@@ -1,0 +1,5 @@
+- Put all the three images and sourcecode(java file) in same folder and create a folder named clusteredImages in the same directory
+- After going in that folder from command line 
+	- javac imageSegmentation.java
+	
+- then to run the program - java imageSegmentation 
