@@ -1,0 +1,5 @@
+val input = sc.textFile("/hxp151330/Assignment2B/input.txt")
+val header = input.first()
+val filterData = input.filter(row => row!=header)
+val mapData = filterData.map(line => line.split("\t")).map(row=>(row(1),row(2).toDouble)).reduceByKey(_+_).sortBy(_._1)
+mapData.collect.foreach(println)
