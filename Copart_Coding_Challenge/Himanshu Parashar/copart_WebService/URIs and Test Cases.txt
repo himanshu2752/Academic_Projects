@@ -1,0 +1,56 @@
+As you can see the resources I have created in rest.java, below you can use these URI's to perform CRUD operations. Once you run it on local server
+
+Valid operations -
+
+Create:
+http://localhost:8080/copart_WebService/Rest_CrudOperations/create/class=starfighter/model=T-67/make=Y-wing/year=1961
+
+http://localhost:8080/copart_WebService/Rest_CrudOperations/create/class=starfighter/model=T-67/make=X-wing/year=1969
+
+http://localhost:8080/copart_WebService/Rest_CrudOperations/create/class=starfighter/model=T-61/make=Y-wing/year=1982
+
+
+Access:
+http://localhost:8080/copart_WebService/Rest_CrudOperations/Access/class=starfighter
+
+http://localhost:8080/copart_WebService/Rest_CrudOperations/Access/year=1961
+
+http://localhost:8080/copart_WebService/Rest_CrudOperations/Access/model=T-67
+
+http://localhost:8080/copart_WebService/Rest_CrudOperations/Access/make=Y-wing
+
+http://localhost:8080/copart_WebService/Rest_CrudOperations/vehicleInfo/id=1
+
+
+Update:
+http://localhost:8080/copart_WebService/Rest_CrudOperations/update/vehicleID=1/class=starfighter/make=T-47/model=Y-wing/year=1961
+
+
+Delete:
+http://localhost:8080/copart_WebService/Rest_CrudOperations/delete/vehicleID=1
+
+
+
+Invalid operations/Some automated Test Cases
+http://localhost:8080/copart_WebService/Rest_CrudOperations/create/class=starfighter/model=T-67/make=Y-wing/year=2061
+
+http://localhost:8080/copart_WebService/Rest_CrudOperations/create/class=/model=T-67/make=Y-wing/year=2061
+
+http://localhost:8080/copart_WebService/Rest_CrudOperations/create/class=starfighter/model=/make=Y-wing/year=2061
+
+http://localhost:8080/copart_WebService/Rest_CrudOperations/create/class=starfighter/
+
+http://localhost:8080/copart_WebService/Rest_CrudOperations/create/class=starfighter/model=TestModel/make=Y-wing/
+
+http://localhost:8080/copart_WebService/Rest_CrudOperations/create/class=starfighter/model=TestModel/make=Y-wing/year=1000
+
+More automated tests can be added as I have mentioned in the code.
+Also I the resources/URI's return xml or html but I can change them to JSON if required.
+
+All the CRUD operations are running fine on my machine. I can give a demo if required.
+
+It can be integrated with database or persistent object like binary file can be created for vehicles.
+
+
+
+
