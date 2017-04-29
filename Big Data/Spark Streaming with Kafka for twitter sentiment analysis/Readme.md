@@ -1,4 +1,4 @@
-###PartB: Sentiment Analysis of tweets using Apache Spark Streaming, Kafka
+### PartB: Sentiment Analysis of tweets using Apache Spark Streaming, Kafka
 
 Steps I followed
 	Collecting tweets in real-time using twitter app and kafka & zookeeper:  to download the tweets from twitter streaming API and push them to kafka queue, I have created a python script appListner.py. The script has my twitter authentication tokens (keys). Before running the script, I first installed some python libraries like
