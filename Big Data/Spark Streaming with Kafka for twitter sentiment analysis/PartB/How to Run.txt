@@ -1,0 +1,20 @@
+1. Go to "kafka_2.9.1-0.8.2.2/bin" if using windoes or "C:\kafka_2.9.1-0.8.2.2\bin\windows" if using windows
+
+Run zookeeper-server-start.bat ..\..\config\zookeeper.properties
+
+kafka-server-start.bat ..\..\config\server.properties
+
+3. Create Topic 
+kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic twitterstream
+
+4. Run python script to stream from twitter api
+
+Python appListner.py 
+
+5. Consumer
+kafka-console-consumer.bat --zookeeper localhost:2181 --topic twitterstream --from-beginning
+
+6. Go to spark_home and run the python program
+
+spark-submit --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.1.0 twitterStream.py
+
