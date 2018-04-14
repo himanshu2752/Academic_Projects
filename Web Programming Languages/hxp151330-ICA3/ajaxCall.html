@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>InClassAssignment_3</title>
+         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="CS6314 inClassAssignment_3. Creating ajax request to parse XML">
+		<meta name="author" content="Himanshu Parashar">
+		<meta name="keywords" content="HTML,,Javascript,jQuery, XML">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <script src="myScript.js"></script>   
+    </head>
+    <body>		
+		<div class="container">
+		<h2>Ajax Call</h2>
+		<p>please click the button "get XML" to parse xml</p>
+        <div>
+			<table class="table table-bordered" id="response" hidden="true">
+				<thead>
+				<tr>
+					<th>Title</th>
+					<th>Author</th>
+					<th>Category</th>
+					<th>Year</th>
+					<th>Price</th>
+				</tr>
+				</thead>
+			</table>
+		</div>
+		
+		<br/>
+		<div>
+			<input id="inp" type="button" value="get XML"></input>
+		</div>
+		</div>
+    </body>
+</html>
+
